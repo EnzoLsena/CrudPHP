@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 <body>
     <div class="container" id="tamanhoContainer">
         <h4>Cadastro de Produtos</h4>
-        <form action="inserir_dados.php" method="post" style=" margin-top: 40px">
+        <form action="inserir_dados.php" method="POST" style=" margin-top: 40px">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Número do Produto</label>
                 <input type="number" class="form-control" name="nmr_products" placeholder="Digite o número do produto">
@@ -37,17 +37,16 @@
                     placeholder="Digite a quantidade do produto">
             </div>
 
-            <div class="form-group" name="fornecedor">
+            <div class="form-group">
                 <label>Fornecedor</label>
-                <select class="form-control">
-                    <option>João fuleiro</option>
-                    <option>Kosko primo</option>
-                    <option>Neca</option>
-
+                <select class="form-control" name="fornecedor">
+                    <option value="João fuleiro">João fuleiro</option>
+                    <option value="Kosko primo">Kosko primo</option>
+                    <option value="Neca">Neca</option>
                 </select>
             </div>
             <div id="btn-cadastro">
-                <button type=" button" class="btn btn-success btn-sm">Cadastrar</button>
+                <button type="submit" class="btn btn-success btn-sm">Cadastrar</button>
             </div>
         </form>
 
