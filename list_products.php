@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+    
     <div class="container" id="myTable">
         <h3>Produtos cadastrados</h3>
         <table class="table" style="margin-top: 20px">
@@ -21,49 +21,52 @@
                     <th scope="col">Categoria</th>
                     <th scope="col">Quantidade</th>
                     <th scope="col">Fornecedor</th>
+                    <th scope="col">Ação</th>
                 </tr>
             </thead>
-
+            
             <?php
 
-            require_once "conexao_db.php";
-            $sql = "SELECT * FROM `estoque`";
-            $busca = mysqli_query($conexao, $sql);
+require_once "conexao_db.php";
+$sql = "SELECT * FROM `estoque`";
+$busca = mysqli_query($conexao, $sql);
 
-            while ($array = mysqli_fetch_array($busca)) {
-                $id_product = $array['id_product'];
-                $nmr_products = $array['nmr_products'];
-                $name_products = $array['name_products'];
-                $products_categories = $array['products_categories'];
-                $qtde_products = $array['qtde_products'];
-                $fornecedor = $array['fornecedor'];
-
-
-            ?>
+while ($array = mysqli_fetch_array($busca)) {
+    $id_product = $array['id_product'];
+    $nmr_products = $array['nmr_products'];
+    $name_products = $array['name_products'];
+    $products_categories = $array['products_categories'];
+    $qtde_products = $array['qtde_products'];
+    $fornecedor = $array['fornecedor'];
+    
+    
+    ?>
                 <tr><?php 
                     echo "<td>$nmr_products</td>";
                     echo "<td>$name_products</td>";
                     echo "<td>$products_categories</td>";
                     echo "<td>$qtde_products</td>";
                     echo "<td>$fornecedor</td>";
+                    echo "<td><a class="btn btn-warning btn-sm" role="button" href="update.php?id=<?php $id_product?>" style=" color: #fff;"><i class="fa-solid fa-pen"></i>Editar</a></td>";
                     ?>
                 <?php } ?>
-
-                </tr>
-
-
+                
+            </tr>
+            
+            
         </table>
-
-
-
+        
+        
+        
     </div>
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://kit.fontawesome.com/635eae0cd0.js" crossorigin="anonymous"></script>
     <script src="Bootstrap/js/bootstrap.js"></script>
 </body>
 
