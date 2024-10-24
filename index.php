@@ -69,16 +69,6 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
     <script src="Bootstrap/js/bootstrap.js"></script>
 
 </body>
