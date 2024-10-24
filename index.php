@@ -5,15 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="res/menu.css" rel="stylesheet">
+
 
     <title>Cadastro</title>
+
+    <style type="text/css">
+        #tamanhoContainer {
+            width: 500px;
+            padding: 40px;
+            background-color: #EBEEF7;
+            border: 1px solid #dddddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+
+        #botao {
+            background-color: #5AAD34;
+            color: #fff;
+
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container" id="tamanhoContainer">
+    <div class="container" id="tamanhoContainer" style=" margin-top: 40px; ">
         <h4>Cadastro de Produtos</h4>
-        <form action="inserir_dados.php" method="POST" style=" margin-top: 40px">
+        <form action="insert.php" method="POST" style="margin-top: 20px;">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Número do Produto</label>
                 <input type="number" class="form-control" name="nmr_products" placeholder="Digite o número do produto">
@@ -45,8 +62,8 @@
                     <option value="Neca">Neca</option>
                 </select>
             </div>
-            <div id="btn-cadastro">
-                <button type="submit" class="btn btn-success btn-sm">Cadastrar</button>
+            <div style="text-align: right;">
+                <button type="submit" class="btn  btn-sm" id="botao">Cadastrar</button>
             </div>
         </form>
 

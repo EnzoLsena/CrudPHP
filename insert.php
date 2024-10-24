@@ -8,14 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $qtde_products = $_POST['qtde_products'];
     $fornecedor = $_POST['fornecedor'];
 }
-$stmt = $conection->prepare("INSERT INTO estoque (nmr_products, name_products, products_categories, qtde_products, fornecedor ) VALUES (:NUMBER, :NAME, :CATEGORIES, :QTDE, :FORNECEDOR )");
+$sql = "INSERT INTO `estoque` (`nmr_products`, `name_products`, `products_categories`, `qtde_products`, `fornecedor` ) VALUES ($nmr_products, '$name_products', '$products_categories', $qtde_products, '$fornecedor')";
 
-$stmt->bindParam(":NUMBER", $nmr_products);
-$stmt->bindParam(":NAME", $name_products);
-$stmt->bindParam(":CATEGORIES", $products_categories);
-$stmt->bindParam(":QTDE", $qtde_products);
-$stmt->bindParam(":FORNECEDOR", $fornecedor);
-$stmt->execute();
+$insert = mysqli_query($conexao, $sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,8 @@
 <?php 
-$conection =  new PDO("mysql:dbname=******;host=127.0.0.1", "*****", "****");
-
+$servername = "kkkkkk";
+$database = "dwdad";
+$user = "root";
+$password = "";
+$conexao = mysqli_connect($servername, $user, $password, $database)
 
 ?>
