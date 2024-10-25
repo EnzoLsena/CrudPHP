@@ -1,20 +1,17 @@
 <?php
-
 require_once "conexao_db.php";
 
-$id = $_POST['id'];
-$name_products = $_POST['name_products'];
-$products_categories = $_POST['products_categories'];
-$qtde_products = $_POST['qtde_products'];
-$fornecedor = $_POST['fornecedor'];
+$id = $_GET['id'];
 
+$sql = "DELETE FROM `soft_estoque`.`estoque`
+WHERE id_product = $id";
 
-$sql = "UPDATE estoque SET  name_products = '$name_products', products_categories= '$products_categories', qtde_products = $qtde_products, fornecedor = '$fornecedor' WHERE id_product = $id";
-
-$atualizar = mysqli_query($conexao, $sql);
-
+$deletar = mysqli_query($conexao, $sql);
 
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -34,7 +31,7 @@ $atualizar = mysqli_query($conexao, $sql);
             align-items: center;
             min-height: 100vh;
             /* Centraliza verticalmente */
-
+            
         }
 
         /* Estilo do card */
@@ -67,7 +64,7 @@ $atualizar = mysqli_query($conexao, $sql);
 <body>
     <div class="full-screen-container">
         <div class="card p-4 text-center">
-            <h3>Atualizado com Sucesso!</h3>
+            <h3>Deletado com Sucesso!</h3>
             <a class="btn btn-sm mt-3" id="btnedit" role="button" href="list_products.php">
                 Voltar <i class="fas fa-arrow-left"></i>
             </a>

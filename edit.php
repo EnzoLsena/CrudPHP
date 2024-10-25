@@ -16,6 +16,10 @@ $id = $_GET['id'];
     <title>Cadastro</title>
 
     <style type="text/css">
+        body {
+            background-color: #303030;
+        }
+
         #tamanhoContainer {
             width: 500px;
             padding: 40px;

@@ -3,74 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Bootstrap/css/bootstrap.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Início - Sistema de Cadastro de Produtos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-
-    <title>Cadastro</title>
-
-    <style type="text/css">
-        #tamanhoContainer {
-            width: 500px;
-            padding: 40px;
-            background-color: #EBEEF7;
-            border: 1px solid #dddddd;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
+    <style>
+        /* Centralizar o container na tela */
+        .full-screen-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Centraliza verticalmente */
+            background-color: #303030;
         }
 
-        #botao {
-            background-color: #5AAD34;
-            color: #fff;
+        /* Estilo do card de conteúdo */
+        .card {
+            max-width: 400px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
+        /* Estilo dos botões */
+        .btn-custom {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Cor e efeito dos botões */
+        .btn-success-custom {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-success-custom:hover {
+            background-color: #218838;
+        }
+
+        .btn-secondary-custom {
+            background-color: #6c757d;
+            color: #fff;
+        }
+
+        .btn-secondary-custom:hover {
+            background-color: #565e64;
         }
     </style>
 </head>
 
 <body>
-    <div class="container" id="tamanhoContainer" style=" margin-top: 40px; ">
-        <h4>Cadastro de Produtos</h4>
-        <form action="insert.php" method="POST" style="margin-top: 20px;">
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Número do Produto</label>
-                <input type="number" class="form-control" name="nmr_products" placeholder="Digite o número do produto">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Nome do Produto</label>
-                <input type="text" class="form-control" name="name_products" placeholder="Digite o nome do produto">
-            </div>
-            <div class="form-group">
-                <label>Selecione a Categoria</label>
-                <select class="form-control" name="products_categories">
-                    <option>Celular</option>
-                    <option>Desktop</option>
-                    <option>Notbook</option>
-                    <option>Hardwares</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Quantidade</label>
-                <input type="number" class="form-control" name="qtde_products"
-                    placeholder="Digite a quantidade do produto">
-            </div>
+    <div class="full-screen-container">
+        <div class="card">
+            <h1 class="mb-4"> Cadastro de Produtos</h1>
+            <h1 class="mb-4"><i class="fa-brands fa-php"></i></h1>
 
-            <div class="form-group">
-                <label>Fornecedor</label>
-                <select class="form-control" name="fornecedor">
-                    <option value="João fuleiro">João fuleiro</option>
-                    <option value="Kosko primo">Kosko primo</option>
-                    <option value="Neca">Neca</option>
-                </select>
-            </div>
-            <div style="text-align: right;">
-                <button type="submit" class="btn  btn-sm" id="botao">Cadastrar</button>
-            </div>
-        </form>
+            <!-- Botão para Página de Cadastro de Produtos -->
+            <a href="add.php" class="btn btn-success-custom btn-custom mb-3">Cadastrar Produtos</a>
 
+            <!-- Botão para Página de Atualizar Produtos -->
+            <a href="list_products.php" class="btn btn-secondary-custom btn-custom">Atualizar Produtos</a>
+        </div>
     </div>
 
-    <script src="Bootstrap/js/bootstrap.js"></script>
-
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/635eae0cd0.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
